@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>soon</title>
+  <style>
+    @font-face {
+      font-family: 'ABC Diatype';
+      src: url('font/abc-diatype-regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f7faf3;
+      font-family: 'ABC Diatype', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame {
+      position: relative;
+      display: inline-block;
+    }
+
+    .frame img.photo {
+      display: block;
+      width: 480px;
+      max-width: 90vw;
+    }
+
+    .frame img.logo {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 460px;
+      pointer-events: none;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div>
+    <div class="frame">
+      <img class="photo" id="bg" src="" alt="" />
+      <img class="logo" src="images/var1_color_outline.png" alt="norg" />
+    </div>
+    <p style="text-align:center;margin-top:18px;font-size:13px;letter-spacing:.15em;color:#1a1814;">soon</p>
+  </div>
+
+  <script>
+    const images = [
+      'images/norg_teaser1.jpg',
+      'images/norg_teaser2.jpg',
+      'images/norg_teaser3.jpg',
+      'images/norg_teaser4.jpg',
+      'images/norg_teaser5.jpg'
+    ];
+    const pick = images[Math.floor(Math.random() * images.length)];
+    document.getElementById('bg').src = pick;
+  </script>
+
+</body>
+</html>
